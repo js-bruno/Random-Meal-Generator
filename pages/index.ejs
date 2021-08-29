@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Meal Generator</title>
+</head>
+<body>
+    <div class="meal">
+        <p>Com fome ?</p>
+        <p>Veja uma receita aleatoria clicando abaixo</p>
+        <form action="/" method="get">
+            <input type="submit" name="meal_button" value="Gerar Receita &#129498">
+        </form>
+    </div>    
+    <% if (show) {%> 
+    <div class="meal-detail">
+        <img src="<%= meal.strMealThumb %> " alt="Comida Image">
+        <div class="meal-desc">
+            <h3><%= meal.strMeal%></h3>
+            <p>
+                <%= meal.strInstructions %> 
+            </p>
+        </div>
+    </div>
+    <div class="meal-category">
+        <p>Category: <%= meal.strCategory %> </p>
+        <p>Area: <%= meal.strArea %></p>
+        <p>Tags: <%= meal.strTags %> </p>
+        <div class="meal-generator">
+            <h3>Ingredients</h3>
+            <ul>
+                <% for (let index = 0; index < ingredients.length; index++) {%> 
+                <li><%= ingredients[index] %> </li>
+                <% } %> 
+            </ul>
+        </div>
+    </div>
+    <div class="meal-video">
+        <h3>Video Recipe</h3>
+        <iframe src="https://www.youtube.com/embed/<%= meal.strYoutube.slice(-11) %> ">
+        </iframe>
+    </div>
+    <% } %> 
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.meal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-size: 30px;
+}
+.meal > p {
+    margin: 5px;
+}
+.meal > form > input[type='submit'] {
+    height: 60px;
+    width: 250px;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ButtonColor*/
+    color: #FFF;
+    font-size: 25px;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.meal > form > input[type='submit']:active {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*Move down*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*Reduce Shadow*/
+    border-bottom: none;
+}
+.meal-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: 105px;
+    margin-right: 105px;
+}
+.meal-detail > img {
+    height: 250px;
+    width: 250px;
+    border-radius: 3%;
+}
+.meal-desc {
+    margin: 10px;
+    margin-top: -5px;
+}
+.meal-desc > p {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.meal-category {
+    padding-left: 6em;
+}
+.meal-video {
+    margin: 6em;
+}
+.meal-video > iframe{
+    width: 100%;
+    height:25em;
+}
